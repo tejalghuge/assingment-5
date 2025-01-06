@@ -41,6 +41,23 @@
       animation: blinkHeart 1s infinite;
     }
 
+    .heart-container {
+      position: relative;
+      width: 70px;
+      height: 70px;
+    }
+
+    .inner-heart {
+      width: 40px;
+      height: 40px;
+      background-color: pink;
+      clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      animation: blinkHeart 1s infinite;
+    }
+
     @keyframes blinkHeart {
       0%, 100% {
         opacity: 1;
@@ -60,7 +77,7 @@
     .cloud {
       width: 60px;
       height: 30px;
-      background-color: lightgray;
+      background-color: rgb(111, 218, 49);
       border-radius: 50%;
       position: absolute;
       animation: moveCloud 3s linear infinite;
@@ -114,7 +131,7 @@
       }
     }
 
-    /* 5. Self Work Placeholder */
+    /* 5. Self Work Example */
     .self-work {
       width: 100px;
       height: 100px;
@@ -123,16 +140,15 @@
       align-items: center;
       justify-content: center;
       border: 2px dashed green;
+      position: relative;
     }
 
-    /* 5.1 Self Work - Bouncing Ball */
-    .bouncing-ball {
-      width: 30px;
-      height: 30px;
+    .self-work-circle {
+      width: 50px;
+      height: 50px;
       background-color: orange;
       border-radius: 50%;
-      position: relative;
-      animation: bounce 1.5s infinite ease-in-out;
+      animation: bounce 2s infinite;
     }
 
     @keyframes bounce {
@@ -140,7 +156,7 @@
         transform: translateY(0);
       }
       50% {
-        transform: translateY(-50px);
+        transform: translateY(-20px);
       }
     }
   </style>
@@ -156,6 +172,7 @@
     <h3>2. Heart Blink</h3>
     <div class="heart"></div>
   </div>
+
 
   <div>
     <h3>3. Nature Animation</h3>
@@ -173,7 +190,7 @@
   <div>
     <h3>5. Self Work</h3>
     <div class="self-work">
-      <div class="bouncing-ball"></div>
+      <div class="self-work-circle"></div>
     </div>
   </div>
 
